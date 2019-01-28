@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap, then Font Awesome, MDB CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.0/css/mdb.min.css">
   </head>
   <body>
 
@@ -26,12 +28,26 @@
         </ul>
         <!--Items on the right -->
         <ul class="navbar-nav">
+          <!--LoG IN Modal -->
           <li class="nav-item">
-            <a href="#" class="nav-link">Login</a>
+            <div class="wrapper-modal-editor">
+              <div class="row d-flex justify-content-center modalWrapper">
+                <div class="text-center">
+                  <a href="/register"
+                     class="btn btn-rounded btn-info btn-sm my-0"
+                     id="addAssignment">LOG IN <i class="fas fa-sign-in-alt"></i>
+                  </a>
+                </div>
+                <div class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAdd" aria-hidden="true">
+                  <div class="modal-dialog cascading-modal" role="document">
+                    <div class="modal-content">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Register</a>
-          </li>
+
         </ul>
       </div>
     </nav>
