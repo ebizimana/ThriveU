@@ -2,7 +2,8 @@
 var express  = require("express"),
     // DB variables
     mongoose = require("mongoose"),
-    url      = "mongodb://localhost/thriveU"
+    url      = process.env.DATABASEURL || "mongodb://localhost/thriveU"
+
     // User variables
     passport              = require("passport"),
     passportLocal         = require("passport-local"),
@@ -17,7 +18,6 @@ mongoose.connect(url, {useNewUrlParser: true })
 app.set("view engine","ejs")
 app.use(express.static(__dirname + "/public"))
 
-
 //******************Routes **********************//
 // Router variables
 var indexRouter = require("./routes/index.js")
@@ -25,6 +25,6 @@ var indexRouter = require("./routes/index.js")
 app.use(indexRouter)
 
 
-app.listen(3000,function(req,res){
+app.listen(process.env.PORT || 5000,function(req,res){
   console.log("Server Started...");
 })
